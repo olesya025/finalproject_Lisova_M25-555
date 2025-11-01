@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "valutatrade-hub"
+version = "0.1.0"
+description = "Currency wallet application"
+authors = ["Lisova M25-555 <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+prettytable = "^3.9.0"
+toml = "^0.10.2"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.valutatrade]
+data_dir = "data/"
+rates_ttl_seconds = 300
+default_base_currency = "USD"
+log_file = "data/valutatrade.log"
+log_format = "JSON"
+log_level = "INFO"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.format]
+quote-style = "double"

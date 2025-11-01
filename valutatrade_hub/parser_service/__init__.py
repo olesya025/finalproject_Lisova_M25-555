@@ -1,0 +1,1 @@
+"""Parser Service for currency rates."""
